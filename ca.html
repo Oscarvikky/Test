@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+           <button onclick="prev()">prev</button>
+           <img id="img" width="100" height="50"  alt="">
+           <button onclick="next()">next</button>
+</body>
+    <script>
+         let img = document.getElementById("img")
+         let arr = ["d1.png", "d2.png", "d3.png","d4.png"]
+         let index = 0;
+         let scr = arr[index];
+            img.src = arr[index];
+              
+         function next(){
+            if(index == arr.length -1){
+                index = 0;
+            } index++;
+            img.src = arr[index];
+           
+         }
+
+         function prev(){
+            if(index == arr.length +1){
+              index = 0;
+            } index--;
+            img.src = arr[index];
+           
+         }
+
+    </script>
+</html>
